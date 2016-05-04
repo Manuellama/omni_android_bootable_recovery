@@ -28,13 +28,14 @@
 
 #include "exec_shell.h"
 
-#define DEFAULT_SHELL "/bin/sh"
+//#define DEFAULT_SHELL "/bin/sh"
+#define DEFAULT_SHELL "/sbin/sh"
 
 void exec_shell(void)
 {
 	const char *shell = getenv("SHELL"), *shell_basename;
 	char *arg0;
-	if (!shell)
+	//if (!shell)
 		shell = DEFAULT_SHELL;
 
 	shell_basename = basename(shell);

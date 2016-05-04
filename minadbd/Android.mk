@@ -21,7 +21,8 @@ LOCAL_CFLAGS := $(minadbd_cflags)
 LOCAL_CONLY_FLAGS := -Wimplicit-function-declaration
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/.. system/core/adb
 LOCAL_WHOLE_STATIC_LIBRARIES := libadbd
-LOCAL_SHARED_LIBRARIES := libbase liblog libmincrypttwrp libcutils libc
+#LOCAL_SHARED_LIBRARIES := libbase liblog libmincrypttwrp libcutils libc
+LOCAL_SHARED_LIBRARIES := liblog libmincrypttwrp libcutils libc
 
 include $(BUILD_SHARED_LIBRARY)
 
@@ -33,6 +34,7 @@ LOCAL_SRC_FILES := fuse_adb_provider_test.cpp
 LOCAL_CFLAGS := $(minadbd_cflags)
 LOCAL_C_INCLUDES := $(LOCAL_PATH) system/core/adb
 LOCAL_STATIC_LIBRARIES := libminadbd
-LOCAL_SHARED_LIBRARIES := liblog libbase libcutils
+#LOCAL_SHARED_LIBRARIES := liblog libbase libcutils
+LOCAL_SHARED_LIBRARIES := liblog libcutils
 
 include $(BUILD_NATIVE_TEST)
